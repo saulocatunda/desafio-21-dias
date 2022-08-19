@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --background-color1: hsl(0, 0%, 13%);
+  --background-color2: hsl(160, 13%, 86%);
+  --text-color1: hsl(200, 31%, 94%);
+  --text-color2: hsl(0, 0%, 17%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+  color: rgb(117, 107, 107);
+  text-transform: uppercase;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+  width: 15rem;
+  height: 5rem;
+  background-color: var(--background-color1);
+  font-weight: 300;
+  font-size: 2rem;
+  color: var(--text-color1);
+  border: none;
+  border-radius: 0.7rem;
+
+  cursor: pointer;
+  transition: all 1s ease;
+}
+
+button:hover {
+  transition: all 500ms;
+  animation-name: colorful;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colorful {
+  0% {
+    background-color: var(--background-color1);
+    color: var(--text-color1);
+    width: 15rem;
+    height: 5rem;
+  }
+  25% {
+    background-color: var(--background-color2);
+    color: var(--text-color2);
+    width: 17rem;
+    height: 8rem;
+  }
+  50% {
+    background-color: var(--background-color1);
+    color: var(--text-color1);
+    width: 15rem;
+    height: 5rem;
+  }
+  75% {
+    background-color: var(--background-color2);
+    color: var(--text-color2);
+    width: 17rem;
+    height: 8rem;
+  }
+  100% {
+    background-color: var(--background-color1);
+    color: var(--text-color1);
+    width: 15rem;
+    height: 5rem;
+  }
+}
